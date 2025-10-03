@@ -1,4 +1,4 @@
-package decoratorPattern;
+package decoratorPattern.pizza;
 
 import decoratorPattern.pizza.basePizza.BasePizza;
 import decoratorPattern.pizza.basePizza.Margherita;
