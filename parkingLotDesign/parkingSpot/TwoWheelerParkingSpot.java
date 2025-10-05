@@ -5,15 +5,19 @@ import parkingLotDesign.vehicle.Vehicle;
 public class TwoWheelerParkingSpot extends ParkingSpot{
 
     @Override
-    public void parkingVehicle(Vehicle vehicle) {
-       super.vehicle=vehicle;
-       super.isEmpty=false;
+    public ParkingSpot parkingVehicle(Vehicle vehicle) {
+        ParkingSpot parkingSpot = new TwoWheelerParkingSpot();
+       parkingSpot.setVehicle(vehicle);
+       parkingSpot.setEmpty(false);
+       return parkingSpot;
     }
 
     @Override
-    public void removeVehicle(int id) {
-        super.vehicle=null;
-        super.isEmpty=true;
+    public ParkingSpot removeVehicle(int id) {
+        ParkingSpot parkingSpot = new TwoWheelerParkingSpot();
+        parkingSpot.setVehicle(null);
+        parkingSpot.setEmpty(true);
+        return parkingSpot;
     }
 
     public int price(){

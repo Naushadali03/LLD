@@ -3,8 +3,11 @@ package parkingLotDesign.parkingSpotManager;
 import java.util.List;
 
 import parkingLotDesign.parkingSpot.ParkingSpot;
+import parkingLotDesign.vehicle.Vehicle;
 
 public class FourWheelerParkingSpotManager extends ParkingSpotManager{
+
+    public FourWheelerParkingSpotManager(){}
 
     public FourWheelerParkingSpotManager(List<ParkingSpot> parkingSpots,ParkingStrategy parkingStrategy) {
         super(parkingSpots,parkingStrategy);
@@ -30,9 +33,10 @@ public class FourWheelerParkingSpotManager extends ParkingSpotManager{
     }
 
     @Override
-    public ParkingSpot addVehicle() {
+    public Vehicle addVehicle(Vehicle vehicle) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addVehicle'");
+        
+        return vehicle;
     }
 
     @Override
