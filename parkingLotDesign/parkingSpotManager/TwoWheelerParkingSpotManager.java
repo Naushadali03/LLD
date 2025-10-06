@@ -34,12 +34,12 @@ public class TwoWheelerParkingSpotManager extends ParkingSpotManager{
     }
 
     @Override
-    public Vehicle addVehicle(Vehicle vehicle) {
+    public ParkingSpot addVehicle(Vehicle vehicle) {
         ParkingSpot parkingSpot = new TwoWheelerParkingSpot();
         parkingSpot.setVehicle(vehicle);
-        super.parkingSpot.add(parkingSpot.parkingVehicle(vehicle));
-
-        return vehicle;
+        ParkingSpot parkingSpot1 = parkingSpot.parkingVehicle(vehicle);
+        super.parkingSpot.add(parkingSpot1);
+        return parkingSpot1;
     }
 
     @Override

@@ -33,10 +33,10 @@ public class FourWheelerParkingSpotManager extends ParkingSpotManager{
     }
 
     @Override
-    public Vehicle addVehicle(Vehicle vehicle) {
+    public ParkingSpot addVehicle(Vehicle vehicle) {
         // TODO Auto-generated method stub
         
-        return vehicle;
+        return null;
     }
 
     @Override

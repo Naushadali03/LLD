@@ -17,6 +17,6 @@ public abstract class ParkingSpotManager {
    public abstract ParkingSpot findParkingspace(ParkingStrategy parkingStrategy);
    public abstract void addParkingSpace();
    public abstract void removeParkingSpace();
-   public abstract Vehicle addVehicle(Vehicle vehicle);
+   public abstract ParkingSpot addVehicle(Vehicle vehicle);
    public abstract void removeVehicle();
 }
