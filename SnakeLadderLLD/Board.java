@@ -5,8 +5,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Board {
     Cells[][] cells;
     public Board(int boardSize,int numberOfSnake,int numberOfLadder){
+        System.out.println("Initializing board..");
         initialize(boardSize);
+        System.out.println("Initialized board");
         addSnakeLadder(cells, numberOfSnake, numberOfLadder);
+        System.out.println("Added snkaed and ladders...");
     }
     public void initialize(int boardSize){
         cells = new Cells[boardSize][boardSize];
@@ -18,7 +21,7 @@ public class Board {
         }
     }
     public void addSnakeLadder(Cells[][] cells,int numberOfSnake,int numberOfLadder){
-        while(numberOfLadder>0){
+        while(numberOfSnake>0){
             int snakeHead = ThreadLocalRandom.current().nextInt(1,cells.length*cells.length-1);
             int snakeTail = ThreadLocalRandom.current().nextInt(1,cells.length*cells.length-1);
             if(snakeTail>=snakeHead) continue;

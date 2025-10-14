@@ -9,11 +9,15 @@ public class Game {
     Deque<Player> playersList = new LinkedList<>();
     Player winner;
     public Game(){
+        System.out.println("Initializing....");
         initialize();
     }
     public void initialize(){
+        System.out.println("Inside intializtion...");
         board = new Board(10, 5, 4);
+        System.out.println("Board is ready");
         dice = new Dice(1);
+        System.out.println("dice is ready....");
         winner=null;
         addPlayer();
     }
@@ -37,6 +41,7 @@ public class Game {
              System.out.println("player turn is:" + playerTurn.id + " new Position is: " + playerNewPosition);
 
             if(playerNewPosition>=board.cells.length*board.cells.length-1){
+                System.out.println("player "+playerTurn.id+" is winner");
                 winner=playerTurn;
             }
 
@@ -55,7 +60,8 @@ public class Game {
             return playerPosition;
         }
         Cells cell = board.getCell(playerPosition);
-        if(cell!=null && cell.jump.start==playerPosition){
+        System.out.println();
+        if(cell!=null && cell.jump!=null && cell.jump.start==playerPosition){
             String jumpBy = (cell.jump.start<cell.jump.end)?"Ladder":"Snake";
             System.out.println("jump done by: " + jumpBy);
             return cell.jump.end;
